@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BulkDirect III — Outpace the Market</title>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #07080b;
+            --accent: #2f6fed;
+            --text: #f4f4f7;
+            --muted: #7e8494;
+            --border: rgba(255, 255, 255, 0.05);
+            --font-sans: 'Geist', sans-serif;
+            --font-mono: 'Geist Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-sans);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1.5rem;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Background Noise Accent */
+        body::before {
+            content: "";
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(47, 111, 237, 0.08) 0%, transparent 65%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .wrapper {
+            max-width: 640px;
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .badge {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            background: rgba(47, 111, 237, 0.1);
+            border: 1px solid rgba(47, 111, 237, 0.2);
+            padding: 6px 16px;
+            border-radius: 100px;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        h1 span {
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 16px;
+            color: var(--muted);
+            line-height: 1.5;
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+
+        /* Input Matrix Form */
+        .cta-group {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            padding: 6px;
+            border-radius: 14px;
+            display: flex;
+            gap: 6px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            margin-bottom: 4rem;
+        }
+
+        input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            padding: 0 1rem;
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        button {
+            background: var(--text);
+            color: var(--bg);
+            border: none;
+            padding: 12px 24px;
+            font-weight: 700;
+            font-size: 13px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        /* Micro Telemetry Footer */
+        .footer-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+            gap: 1rem;
+        }
+
+        .metric-item {
+            text-align: left;
+        }
+
+        .metric-label {
+            font-size: 11px;
+            font-family: var(--font-mono);
+            color: var(--muted);
+            text-transform: uppercase;
+            margin-bottom: 0.2rem;
+        }
+
+        .metric-val {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 32px; }
+            .cta-group { flex-direction: column; background: transparent; border: none; padding: 0; gap: 12px; }
+            input { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); padding: 16px; border-radius: 12px; }
+            button { padding: 16px; border-radius: 12px; }
+            .footer-metrics { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
+            .metric-item { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="badge">BulkDirect Phase III</div>
+        
+        <h1>Arrêtez de deviner.<br><span>Analysez l'intention brute.</span></h1>
+        
+        <p>Extrayez les signaux faibles, filtrez le bruit et anticipez les dynamiques de marché avant la saturation des canaux.</p>
+
+        <div class="cta-group">
+            <input type="email" placeholder="Adresse e-mail professionnelle..." required>
+            <button type="submit">Obtenir l'accès</button>
+        </div>
+
+        <div class="footer-metrics">
+            <div class="metric-item">
+                <div class="metric-label">Latency</div>
+                <div class="metric-val">14ms</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-label">Accuracy</div>
+                <div class="metric-val">99.4%</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-label">Data Nodes</div>
+                <div class="metric-val">Real-time</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
